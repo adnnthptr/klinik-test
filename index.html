@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Perpustakaan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Aplikasi Perpustakaan</h1>
+  </header>
+  <main>
+    <section id="input-section">
+      <h2>Buku baru</h2>
+      <form id="input-form">
+        <div>
+          <label for="title">Judul:</label>
+          <input type="text" id="title" required>
+        </div>
+        <div>
+          <label for="author">Penulis:</label>
+          <input type="text" id="author" required>
+        </div>
+        <div class="input">
+            <label for="inputBookYear">Tahun:</label>
+            <input id="inputBookYear" type="number" required>
+        </div>
+        <div>
+          <label for="isComplete">Status:</label>
+          <select id="isComplete">
+            <option value="false">Belum selesai</option>
+            <option value="true">Selesai</option>
+          </select>
+        </div>
+        <button type="submit">Tambah Buku</button>
+      </form>
+    </section>
+
+    <section id="bookshelves">
+      <div id="incomplete-shelf" class="shelf">
+        <h2>Belum Selesai</h2>
+        <ul id="incomplete-books"></ul>
+      </div>
+      <div id="complete-shelf" class="shelf">
+        <h2>Selesai</h2>
+        <ul id="complete-books"></ul>
+      </div>
+    </section>
+  </main>
+  <script src="main.js" defer></script>
+</body>
+</html>
